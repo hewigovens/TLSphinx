@@ -88,8 +88,8 @@ ps_default_search_args(cmd_ln_t *);
  * Initialize the decoder from a configuration object.
  *
  * @note The decoder retains ownership of the pointer
- * <code>config</code>, so you must not attempt to free it manually.
- * If you wish to reuse it elsewhere, call cmd_ln_retain() on it.
+ * <code>config</code>, so if you are not going to use it
+ * elsewere, you can free it.
  *
  * @param config a command-line structure, as created by
  * cmd_ln_parse_r() or cmd_ln_parse_file_r().
@@ -641,8 +641,9 @@ void ps_get_rawdata(ps_decoder_t *ps, int16 **buffer, int32 *size);
 /**
  * @mainpage PocketSphinx API Documentation
  * @author David Huggins-Daines <dhuggins@cs.cmu.edu>
- * @version 0.6
- * @date March, 2010
+ * @author Alpha Cephei Inc.
+ * @version 5prealpha
+ * @date July, 2015
  *
  * @section intro_sec Introduction
  *
